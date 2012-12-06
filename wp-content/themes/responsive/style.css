@@ -1236,8 +1236,8 @@ form div {
 /* =Header
 -------------------------------------------------------------- */
 #logo {
-	float: left;
-	margin: 0;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .site-name {
