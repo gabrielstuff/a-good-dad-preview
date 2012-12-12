@@ -42,7 +42,6 @@ if ( !defined('ABSPATH')) exit;
                 </div><!-- end of .post-data -->
                 <?php endif; ?>             
             
-            <div class="post-edit"><?php edit_post_link(__('Edit', 'responsive')); ?></div> 
             </div><!-- end of #post-<?php the_ID(); ?> -->
 
             
@@ -81,8 +80,10 @@ if ( !defined('ABSPATH')) exit;
                     </div><!-- end of .widget-wrapper -->
                 </div><!-- end of .col-300 -->                
             <?php
+            $count_block++;
             }
             ?>
            </div><!-- end of #widgets -->
+            <div class="post-edit"><?php edit_post_link(__('Edit', 'responsive')); ?></div> 
 
 <?php get_footer(); ?>
