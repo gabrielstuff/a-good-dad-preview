@@ -49,14 +49,15 @@ if ( !defined('ABSPATH')) exit;
 
             $blocks = simple_fields_get_post_group_values(get_the_id(), "Blocks", true, 2);
             
-            foreach ($blocks as $block) {?>
+            foreach ($blocks as $block) { ?>
                 <div class="grid col-300">                
                     <div class="widget-wrapper">
                         <div class="widget-title-home"><h3><?php echo $block["the_title_block"]; ?></h3></div>
                         <div class="textwidget"><?php $block["the_content_block"]; ?></div>
                     </div><!-- end of .widget-wrapper -->
                 </div><!-- end of .col-300 -->                
-            <?php}
+            <?php
+            }
             ?>
            </div><!-- end of #widgets -->
 
