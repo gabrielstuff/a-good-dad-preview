@@ -44,7 +44,11 @@ if ( !defined('ABSPATH')) exit;
             
             <div class="post-edit"><?php edit_post_link(__('Edit', 'responsive')); ?></div> 
             </div><!-- end of #post-<?php the_ID(); ?> -->
-                        
+            <?php
+            $selected_values = simple_fields_get_post_group_values(get_the_id(), "Blocks", true, 1);
+            print_r($selected_values);
+            ?>
+            
         <?php endwhile; ?> 
         
         <?php if (  $wp_query->max_num_pages > 1 ) : ?>
