@@ -44,22 +44,6 @@ if ( !defined('ABSPATH')) exit;
             
             <div class="post-edit"><?php edit_post_link(__('Edit', 'responsive')); ?></div> 
             </div><!-- end of #post-<?php the_ID(); ?> -->
-             <div id="widgets" class="home-widgets">
-            <?php
-
-            $blocks = simple_fields_get_post_group_values(get_the_id(), "Blocks", true, 2);
-            
-            foreach ($blocks as $block) { ?>
-                <div class="grid col-300">                
-                    <div class="widget-wrapper">
-                        <div class="widget-title-home"><h3><?php echo $block["the_title_block"]; ?></h3></div>
-                        <div class="textwidget"><?php $block["the_content_block"]; ?></div>
-                    </div><!-- end of .widget-wrapper -->
-                </div><!-- end of .col-300 -->                
-            <?php
-            }
-            ?>
-           </div><!-- end of #widgets -->
 
             
         <?php endwhile; ?> 
@@ -81,5 +65,22 @@ if ( !defined('ABSPATH')) exit;
 <?php endif; ?>  
       
         </div><!-- end of #content-full -->
+
+         <div id="widgets" class="home-widgets">
+            <?php
+
+            $blocks = simple_fields_get_post_group_values(get_the_id(), "Blocks", true, 2);
+            print_r($blocks)
+            foreach ($blocks as $block) { ?>
+                <div class="grid col-300">                
+                    <div class="widget-wrapper">
+                        <div class="widget-title-home"><h3><?php echo $block["the_title_block"]; ?></h3></div>
+                        <div class="textwidget"><?php $block["the_content_block"]; ?></div>
+                    </div><!-- end of .widget-wrapper -->
+                </div><!-- end of .col-300 -->                
+            <?php
+            }
+            ?>
+           </div><!-- end of #widgets -->
 
 <?php get_footer(); ?>
