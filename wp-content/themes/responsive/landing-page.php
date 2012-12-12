@@ -73,7 +73,7 @@ if ( !defined('ABSPATH')) exit;
             $count_block = 1;
             $nb_block = 3;
             foreach ($blocks as $block) { ?>
-                <div class="grid col-<?php echo $nb_block;?>00 <?php if($count_block%$nb_block == 0){echo " fit";}?>">                
+                <div class="grid col-<?php echo $nb_block;?>00<?php if($count_block%$nb_block == 0){echo " fit";}?>">                
                     <div class="widget-wrapper">
                         <div class="widget-title-home"><h3><?php echo $block["Title"]; ?></h3></div>
                         <div class="textwidget"><?php echo $block["content"]; ?></div>
