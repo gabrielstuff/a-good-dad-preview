@@ -71,11 +71,13 @@ if ( !defined('ABSPATH')) exit;
 
             $blocks = simple_fields_get_post_group_values(get_the_id(), "Blocks", true, 2);
             //print_r($blocks);
+            $count_block = 0;
+            $nb_block = 3;
             foreach ($blocks as $block) { ?>
-                <div class="grid col-300">                
+                <div class="grid col-<?php echo $nb_block;?>00 <?php if($count_block%$nb_block){echo " fit";}?>">                
                     <div class="widget-wrapper">
                         <div class="widget-title-home"><h3><?php echo $block["Title"]; ?></h3></div>
-                        <div class="textwidget"><?php $block["content"]; ?></div>
+                        <div class="textwidget"><?php echo $block["content"]; ?></div>
                     </div><!-- end of .widget-wrapper -->
                 </div><!-- end of .col-300 -->                
             <?php
