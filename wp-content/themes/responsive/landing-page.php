@@ -70,7 +70,7 @@ if ( !defined('ABSPATH')) exit;
             <?php
 
             $blocks = simple_fields_get_post_group_values(get_the_id(), "Blocks", true, 2);
-            print_r($blocks)
+            print_r($blocks);
             foreach ($blocks as $block) { ?>
                 <div class="grid col-300">                
                     <div class="widget-wrapper">
