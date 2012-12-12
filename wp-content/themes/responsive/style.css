@@ -3739,3 +3739,8 @@ a.thumbnail{background-color:#dfdfdf;}a.thumbnail:hover{background-color:#bbbbbb
 .show{display:block;}
 .invisible{visibility:hidden;}
 .affix{position:fixed;}
+
+
+textarea.wpcf7-textarea{
+	width: 100% !important;
+}

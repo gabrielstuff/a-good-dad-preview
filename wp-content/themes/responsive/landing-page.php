@@ -70,7 +70,7 @@ if ( !defined('ABSPATH')) exit;
 
             $blocks = simple_fields_get_post_group_values(get_the_id(), "Blocks", true, 2);
             //print_r($blocks);
-            $count_block = 0;
+            $count_block = 1;
             $nb_block = 3;
             foreach ($blocks as $block) { ?>
                 <div class="grid col-<?php echo $nb_block;?>00 <?php if($count_block%$nb_block == 0){echo " fit";}?>">                
