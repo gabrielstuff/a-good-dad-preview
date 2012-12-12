@@ -46,7 +46,7 @@ if ( !defined('ABSPATH')) exit;
             </div><!-- end of #post-<?php the_ID(); ?> -->
             <?php
             $blocks = simple_fields_get_post_group_values(get_the_id(), "Blocks", true, 1);
-            print_r($blocks[0]);
+            echo size($blocks);
             ?>
             
         <?php endwhile; ?> 
