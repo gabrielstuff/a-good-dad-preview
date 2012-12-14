@@ -1,4 +1,5 @@
 <?php
+require_once "dbinfo.php";
 /**
  * The base configurations of the WordPress.
  *
