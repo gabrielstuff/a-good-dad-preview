@@ -1,5 +1,10 @@
 <?php
-require_once "dbinfo.php";
+$filename = "dbinfo.php";
+
+if (file_exists($filename)) {
+  require_once $filename;
+}
+
 /**
  * The base configurations of the WordPress.
  *
